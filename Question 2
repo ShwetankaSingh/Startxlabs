@@ -1,0 +1,77 @@
+2) You are given  two numbers L and R, you have to find if XOR of all the numbers in range L to R (L,R both inclusive) is odd or even.
+Input:
+The first line will contain T, number of testcases.
+Each testcase contains a single line of input, two integers L,R.
+
+Output:
+For each testcase, in the new line print "Odd" if the XOR in the range is odd, else print "Even".
+Sample Input:
+  4
+  1 4
+  2 6
+  3 3
+  2 3
+
+Sample Output:
+  Even
+  Even
+  Odd
+  Odd
+
+Solution :
+
+<!doctype html>
+<html>
+<head>
+<script>
+function odd_even(){
+var no;
+no=Number(document.getElementById("no_input").value);
+var inputArray = [];
+var outputArray = [];
+for(var i=0; i<no; i++) {
+	//Taking Input from user
+	inputArray[i] = prompt('Enter Elements l & r');
+}
+for(var i=0;i<no;i++)
+{
+var e=inputArray[i];
+var a=e[0];
+var b=e[2];
+var d=a;
+for(var j=a+1;j<=b;j++)
+{
+d=d^j;
+}
+if(d%2==0)
+{
+outputArray[i]="Even";
+}
+else
+{
+outputArray[i]="Odd";
+}
+}
+document.write("Input:"+"<br />");
+document.write(no+"<br />");
+for (var i = 0; i < no; i++)  
+{ 
+    document.write(inputArray[i]+"<br />");
+} 
+document.write("<br />"+"Output:"+"<br />");
+for (i = 0; i < no; i++)  
+{ 
+    document.write(outputArray[i]+"<br />");
+} 
+}
+</script>
+</head>
+<body>
+Enter number of testcases : <input id="no_input"><br />
+<button onclick="odd_even()">Click me</button>
+</body>
+</html>     
+
+
+
+
