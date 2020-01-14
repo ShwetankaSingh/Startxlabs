@@ -1,0 +1,37 @@
+1) Get number of hours, minutes and seconds from number of seconds.
+For example :  If number of seconds provided are 129 , then number of hours will be 0 , minutes 2, seconds 9.
+Input :  Number of seconds.
+Output : “Hours = ‘number of hours’, minutes = ‘number of minutes’ , seconds = ‘number of seconds’ ”
+
+Solution:
+
+<!doctype html>
+<html>
+<head>
+<script>
+function fun(){
+var a,min,sec,hr;
+a=Number(document.getElementById("tos").value);
+min=parseInt(a/60);
+sec=parseInt(a%60);
+hr=parseInt(min/60);
+min=parseInt(min%60);
+document.getElementById("h").value= hr;
+document.getElementById("m").value= min;
+document.getElementById("s").value= sec;
+}
+</script>
+</head>
+<body>
+Enter the number of seconds : <input id="tos">
+<br><br>
+<button onclick="fun()">Click</button>
+<br><br>
+Hours:<input id="h">
+<br><br>
+minutes:<input id="m">
+<br><br>
+seconds:<input id="s">
+</body>
+</html>
+
